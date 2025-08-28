@@ -16,6 +16,7 @@ DNA (template strand) --> Transcription (RNA polymerase) --> mRNA (messenger RNA
 * Handles multiple sequences in a single FASTA file.
 * Skips headers and concatenates sequence lines.
 * Translates DNA/RNA sequences into amino acids.
+* Starts translation from the first ATG codon (start codon); ignores UTRs before CDS.
 * Stops translation at the first stop codon.
 * Displays first 100 amino acids and protein length.
 
@@ -29,16 +30,16 @@ DNA (template strand) --> Transcription (RNA polymerase) --> mRNA (messenger RNA
 FASTA file [1] contains:
 
 ```
-> NM_000546.6 TP53 [organism=Homo sapiens] [GeneID=7157] [transcript=1]
-ATGGAGGAGCCGCAGTCAGATCCTAGCGTCGAGCCCCCTCTGAGCTTTGAGGTGCGTGTTTGTGC...
+>NM_000546.6 TP53 [organism=Homo sapiens] [GeneID=7157] [transcript=1]
+CTCAAAAGTCTAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGC...
 ```
 
 Script output:
 
 ```
 > NM_000546.6 TP53 [organism=Homo sapiens] [GeneID=7157] [transcript=1]
-LKSLEPPXREQVAAGLRGHXAXGLGACXPRR ...
-Length protein: 31
+MEEPQSDPSVEPPLSQETFSDLWKLLPENNVLSPLPSQAMDDLMLSPDDIEQWFTEDPGPDEAPRMPEAAPPVAPAPAAPTPAAPAPAPSWPLSSSVPSQKTYQGSYGFRLGFLHSGTAKSVTCTYSPALNKMFCQLAKTCPVQLWVDSTPPPGTRVRAMAIYKQSQHMTEVVRRCPHHERCSDSDGLAPPQHLIRVEGNLRVEYLDDRNTFRHSVVVPYEPPEVGSDCTTIHYNYMCNSSCMGGMNRRPILTIITLEDSSGNLLGRNSFEVRVCACPGRDRRTEEENLRKKGEPHHELPPGSTKRALPNNTSSSPQPKKKPLDGEYFTLQIRGRERFEMFRELNEALELKDAQAGKEPGGSRAHSSHLKSKKGQSTSRHKKLMFKTEGPDSD ...
+Length protein: 393
 ```
 
 * `>` indicates the FASTA header.
