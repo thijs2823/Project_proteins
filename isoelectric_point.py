@@ -1,5 +1,6 @@
 def simple_pI(sequence): #Simple estimate of isoelectric point. Calculates approximate isoelectric point for the given protein sequence.
-    """
+
+# pKa dictionary 
     pKa_values = {
         'K': 10.8, 'R': 12.5, 'H': 6.5,
         'D': 3.9, 'E': 4.1, 'C': 8.5, 'Y': 10.1
