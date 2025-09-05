@@ -50,7 +50,7 @@ Length protein: 393
 
 ## BiLSTM model for protein structure prediction
 This project contains a Bi-directional LSTM (BiLSTM) model for predicting protein secondary structures (Q8 classification) using the NEW364 dataset.
-The Q8 classification refers to a scheme for predicting protien secondary structures. Eeah amino adcid in a protien sequences is assigned to one of eight structured states.
+The Q8 classification refers to a scheme for predicting protien secondary structures. Each amino acid in a protein sequences is assigned to one of eight structured states.
 - H: Alpha helix
 - G: 3₁₀ helix
 - I: Pi helix
